@@ -1,0 +1,92 @@
+#myFriends{
+	width:70%;
+	position: relative;
+	border-radius: 5px;
+	border:1px solid #FAFBFC;
+	background-color: white;
+}
+
+#friendsDivHeader{
+	padding:20px 10px;
+	background-color: #FAFBFC
+}
+
+#friendsDivHeader span{
+	margin-left: 5px;
+	color:grey;
+}
+
+#friendsSearch{
+	box-sizing: border-box;
+	width:100%;
+	border:none;
+	padding:15px;
+	border-bottom: 2px solid #FAFBFC;
+}
+
+#friendsSearch:focus{
+	outline: none;
+}
+
+
+.friend{
+	display: flex;
+}
+
+.friend img{
+	height:100px;
+	width:100px;
+	border-radius: 50%;
+}
+
+.friend:not(:last-child){
+	border-bottom: 1px solid grey;
+}
+
+#friendsData{
+	width:60%;
+	display: flex;
+	align-items: center;
+}
+
+#friendsData>div{
+	margin-left: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+#friendsData a{
+	color:#2A5885;
+	text-decoration: none;
+}
+
+#friendsData a:not(:nth-child(2)){
+	margin-bottom: 10px;
+}
+
+#freidsData a:visited{
+	color:initial;
+	columns: #2a5885;;
+}
+
+.friend>.friendsActionButtons{
+	float:left;
+}
+
+.friendsActionButtons{
+	width:40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.friendsActionButtons p{
+	cursor:pointer;
+	text-decoration: none;
+	color:grey;
+}
+
+.friendsActionButtons>*{
+	cursor:pointer;
+}

@@ -1,0 +1,255 @@
+*{
+	flex-wrap: wrap;
+}
+
+/*-----------------------------------general--------------*/
+
+#content{
+	display: flex;
+}
+
+#div1>*,#div2>*{
+	background-color: white;
+	padding:6px;
+	border-radius: 3px;
+}
+
+#div1,#div2{
+	overflow-wrap: break-word;
+	display: flex;
+	flex-direction: column;
+}
+
+#div1{
+	width:28%;
+	margin-right: 5px;
+}
+
+#div2{
+	width:60%;
+}
+
+/*--------------------------------------------------------------------*/
+
+
+/*--------------------------------------user_info-------------------------*/
+
+#img_div{
+	text-align: center;
+	position: relative;
+}
+
+#img_div div{
+	width:200px;
+	margin:auto;
+	position: relative;
+}
+
+#img_div img{
+	cursor:pointer;
+	border-radius: 4px;
+	width:200px;
+	height: 250px;
+
+}
+
+#updatePhotoButton{
+	background: rgba(0,0,0,0.3);
+	display: none;
+	cursor: pointer;
+	width:100%;
+	height: 25px;
+	position: absolute;
+	bottom:4px;
+	left: 0px;
+	color:white;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+#updatePhotoButton button{
+	border:none;
+	background: rgba(0,0,0,0.3);
+	cursor: pointer;
+	width:100%;
+
+}
+
+#updatePhotoButton:hover{
+	background: rgba(0,0,0,0.8);
+	transition-duration: 0.2s;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+#img_div div:hover #updatePhotoButton{
+	display: block;
+	 -webkit-animation: fadeIn 1s;
+    animation: fadeIn 0.5s;	
+}
+
+#uploadPhotoInput{
+	display: none;
+}
+
+#last_seen{
+	float: right;
+}
+
+#status{
+	margin-top: 3px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #E5EBF1;
+}
+
+#status p{
+	font-size: 14px;
+	cursor:pointer;
+	color:grey;
+}
+
+/*-----------------------------------------------------------------------*/
+
+/*------------------------------------friends div-------------------------*/
+
+#friends_div{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+#friendsCount{
+	text-align: center;
+	cursor: pointer;
+}
+
+#friendsCount span{
+	color:grey;
+}
+
+.friend{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.friend img{
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+
+.friend a{
+	max-width: 9ch;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	color:#5181B8;
+}
+
+#friends{
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#friends>*:not(:first-child){
+	margin-left: 7px;
+}
+
+/*-------------------------------------------------------------------------*/
+
+
+/*----------------------------------photos----------------------------------*/
+
+#photos_div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 100px;
+	justify-content: flex-start;
+	padding: 5px 30px;
+}
+
+#photos_div>p{
+	cursor:pointer;
+	display: flex;
+	justify-content: center;
+	width:100%;
+}
+
+#photos_div>p>span{
+	color:grey;
+	margin-left: 5px;
+}
+
+#photos_div>div{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+
+#photos_div>div>*:not(:first-child){
+	margin-left: 10px;
+}
+
+#photos_div img{
+	width:115px;
+	height:115px;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*--------------------------------------- statuses -------------------------*/
+#user_feed{
+	margin-top: 20px;
+}
+
+#user_feed textarea{
+	border:none;
+	box-sizing: border-box;
+	padding:10px;
+	resize: none;
+    overflow: hidden;
+    min-height: 30px;
+    max-height: 100px;
+    width:100%;
+}
+
+#user_feed textarea:focus{
+	border:none;
+}
+
+#user_feed>input{
+	border:1px solid grey;
+	padding:10px 50px;
+}
+
+#add_status_button{
+	display: none;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+#myStatuses{
+	background-color: initial;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}

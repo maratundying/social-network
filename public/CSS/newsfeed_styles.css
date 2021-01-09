@@ -1,0 +1,97 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.post{
+	background-color: white;
+	width:70%;
+	border-radius: 6px;
+}
+
+.post:not(:first-child){
+	margin-top: 10px;
+
+}
+
+#postData img{
+	height:55px;
+	width:55px;
+	border-radius: 50%;
+}
+
+#postData{
+	color:#5181B8;
+	font-size: 15px;
+	position: relative;
+	padding:3px;
+	display: flex;
+	align-items: center;
+}
+
+#postData a{
+	text-decoration: none;
+	color:#5181B8;
+}
+
+#postData a:hover{
+	text-decoration: underline;
+}
+
+#postdata a:link{
+	color:#5181B8;
+	text-decoration: none;
+}
+
+#postdata a:visited{
+	color:#5181B8;
+	text-decoration: none;
+}
+
+#postData{
+
+}
+
+
+/*-------------------- border bottom----------------*/
+#userStatus{
+	position: relative;
+	padding-left: 12px;
+}
+
+#statusBorder{
+	content: "";
+	background: #EDEEF0;
+	height:1px;
+	width: 100%;
+	margin: 10px 0;
+}
+
+#statusButtons{
+	font-size: 22px;
+	padding-left: 12px;
+	padding-bottom: 10px;
+	color: #808080;
+	display: flex;
+	justify-content: flex-start;
+}
+
+#statusButtons>*{
+	cursor:pointer;
+}
+
+.fa-commenting-o{
+	font-size: 23px;
+}
+
+#statusButtons>*:not(:first-child){
+	margin-left: 5px;
+}
+
+#statusButtons>*:not(.unlikePost):hover{
+	color:black;
+}
+
+.unlikePost{
+	color:red;
+}

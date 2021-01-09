@@ -1,0 +1,233 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: #EDEEF0;
+}
+
+#header{
+	display: flex;
+	justify-content: center;
+	/*border:1px solid black;*/
+	padding:10px 0;
+	padding-right: 50px;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+#header>*{
+	width:30%;
+	text-align: center;
+}
+
+#search{
+	/*border:1px solid black;*/
+	display: flex;
+}
+
+
+
+#search_div{
+	height:18px;
+	background: #EDEEF0;
+	width:200px;
+	padding:5px;
+	display: flex;
+	justify-content: center;
+	border-radius: 5px;
+
+}
+
+#search_div i{
+	color:#808080;
+}
+
+#search_div input[type=text]{
+	border:none;
+	background: #EDEEF0;
+	margin-left: 3px;
+}
+
+#search_div input[type=text]:focus{
+	border: none;
+	outline: none;
+}
+
+#notificationIcon{
+	font-size: 20px;
+	color:grey;
+	font-weight: bold;
+	position: relative;
+	top:4px;
+	left: 10px;
+	/*color:#5181B8;*/
+}
+
+
+#header_data div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#header_data img{
+	height:30px;
+	width:30px;
+	border-radius: 50%;
+}
+
+#header_data i{
+	margin-left: 10px;
+	font-size: 19px;
+}
+
+#body{
+	display: flex;
+}
+
+#menu,#content{
+	padding:6px;
+}
+
+#menu{
+	width:27%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#menu>ul{
+	margin-right: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+#menu>ul>a{
+	list-style-type: none;
+	padding:4px 50px 4px 5px;
+	text-align: left;
+	margin-top: 1px;
+	cursor:pointer;
+	border-radius: 4px;
+}
+
+#menu>ul>a:hover{
+	background:#DCE1E6;
+}
+
+#menu a{
+	text-decoration: none;
+	color:black;
+}
+
+#menu ul i{
+	margin-right: 10px;
+	color:#5181B8;
+	font-size: 15px;
+}
+
+#content{
+	margin-left: 3px;
+	width: 70%;
+}
+
+/*-------------------------- POSTS CSS-----------------------*/
+
+
+.post{
+	background-color: white;
+	width:100%;
+	border-radius: 6px;
+}
+
+.post:not(:first-child){
+	margin-top: 10px;
+}
+
+#postData img{
+	height:55px;
+	width:55px;
+	border-radius: 50%;
+}
+
+#postData{
+	width:100%;
+	color:#5181B8;
+	font-size: 15px;
+	position: relative;
+	padding:3px;
+	display: flex;
+	align-items: center;
+}
+
+#postData a{
+	text-decoration: none;
+	color:#5181B8;
+}
+
+#postData>div{
+	margin-left: 5px;
+}
+
+#postData>div:nth-child(2){
+	color:#939393;
+}
+
+#postData a:hover{
+	text-decoration: underline;
+}
+
+#postdata a:link{
+	color:#5181B8;
+	text-decoration: none;
+}
+
+#postdata a:visited{
+	color:#5181B8;
+	text-decoration: none;
+}
+
+/*-------------------- border bottom----------------*/
+#userStatus{
+	position: relative;
+	padding-left: 12px;
+}
+
+#statusBorder{
+	content: "";
+	background: #EDEEF0;
+	height:1px;
+	width: 100%;
+	margin: 10px 0;
+}
+
+#statusButtons{
+	font-size: 22px;
+	padding-left: 12px;
+	padding-bottom: 10px;
+	color: #808080;
+	display: flex;
+	justify-content: flex-start;
+}
+
+#statusButtons>*{
+	cursor:pointer;
+}
+
+.fa-commenting-o{
+	font-size: 23px;
+}
+
+#statusButtons>*:not(:first-child){
+	margin-left: 5px;
+}
+
+#statusButtons>*:not(.unlikePost):hover{
+	color:black;
+}
+
+.unlikePost{
+	color:red;
+}
+/*-----------------------------------------------------------*/

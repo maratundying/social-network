@@ -1,0 +1,16 @@
+/*---------------------------------- search -----------------------------*/
+#messages_search_div{
+	display: flex;
+	justify-content: center;
+	padding-right: 70px;
+}
+
+#messages_search_div input{
+	width:40%;
+	padding:10px;
+	border-radius: 5px;
+	border:1px solid grey;
+}
+
+
+/*----------------------------------------------------------------------*/

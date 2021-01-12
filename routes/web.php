@@ -36,3 +36,5 @@ Route::post('/unlikePost','AuthorizedUserController@unlikePost');
 Route::post('/changeProfilePhoto','AuthorizedUserController@changeProfilePhoto');
 Route::post('/addNewStatus','AuthorizedUserController@addNewStatus');
 Route::post('/unfriendFromFriend','AuthorizedUserController@unfriendFromFriend');
+Route::post('/sendFriendRequest','AuthorizedUserController@sendFriendRequest');
+Route::post('/cancelFriendRequest','AuthorizedUserController@cancelFriendRequest');

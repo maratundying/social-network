@@ -10,11 +10,29 @@
 
 
 @section('content')
-	<div id="div1">
+	<div id="div1" >
 		<div id="img_div">
 			<div>
 				<img src="../{{$user_data[0]->image}}" id="userPhoto" alt="">
 			</div>
+		</div>
+
+		<div id="users_contact_div" data-userId='{{$user_data[0]->id}}'>
+				<div id="friendOrUnfriend">
+				@if($isFriend=='true')
+					<button id="unfriend">Unfriend</button>
+					<div>
+						<p id="unfriendButton">Unfriend</p>
+						<p>Cancel</p>
+					</div>
+					@else
+						@if($request=='false')
+						<button id="addFriendButton">Add friend</button>
+						@else
+							<p data-data='{{$request->id}}' class="cancelFriendRequest">Cancel friend request</p>
+						@endif
+				@endif
+				</div>
 		</div>
 
 		<div id="friends_div">
@@ -22,7 +40,6 @@
 			<div id="friendsCount">Friends <span>{{count($user_friends)}}</span></div>
 			<div id="friends">
 				@foreach($user_friends as $friend)
-					
 					<div class="friend">
 						@if($friend->user1_id==$user_data[0]->id)
 							<img src="../{{$friend->meAddedFriendData->image}}" alt="">
@@ -57,11 +74,14 @@
 
 		<div id="photos_div">
 			<p>{{$user_data[0]->name}}'s photos <span>{{count($user_photos)}}</span></p>
+			@if(count($user_photos)>0)
 			<div>
-				@foreach($user_photos as $photo)
+				@foreach($user_photos_limited as $photo)
 					<img src="{{$photo->photo}}" alt="">
 				@endforeach
 			</div>
+			@endif
+				<p>User have no photo</p>
 		</div>
 
 		<div id="userStatuses">
@@ -106,4 +126,8 @@
 		</div>
 
 	</div>
+@endsection
+
+@section('script')
+	<script src="{{URL::asset('js/user_profile_scripts.js')}}"></script>
 @endsection

@@ -1,6 +1,12 @@
+button{
+	cursor: pointer;
+}
+
 *{
 	flex-wrap: wrap;
 }
+
+
 
 /*-----------------------------------general--------------*/
 
@@ -53,32 +59,39 @@
 
 }
 
-#updatePhotoButton{
-	background: rgba(0,0,0,0.3);
+/*-------------------------------------- friend or unfriend ------------------*/
+
+
+#friendOrUnfriend{
+	width:100%;
+	/*border:1px solid black;*/
+}
+
+#friendOrUnfriend div{
 	display: none;
-	cursor: pointer;
-	width:100%;
-	height: 25px;
-	position: absolute;
-	bottom:4px;
-	left: 0px;
-	color:white;
-	border-bottom-right-radius: 6px;
-	border-bottom-left-radius: 6px;
 }
 
-#updatePhotoButton button{
+#friendOrUnfriend button{
 	border:none;
-	background: rgba(0,0,0,0.3);
-	cursor: pointer;
+	outline: none;
+}
+
+#friendOrUnfriend>p{
+	color:grey;
+	/*border:1px solid black;*/
+	cursor:pointer;
+	display: flex;
+	justify-content: center;
+	padding:5px;
+}
+
+#addFriendButton{
 	width:100%;
-
+	padding: 5px 10px;
+	background-color: #5181B8;
+	color:white;
 }
-
-#updatePhotoButton:hover{
-	background: rgba(0,0,0,0.8);
-	transition-duration: 0.2s;
-}
+/*-----------------------------------------------------------------------------*/
 
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
@@ -87,16 +100,6 @@
 @keyframes fadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
-}
-
-#img_div div:hover #updatePhotoButton{
-	display: block;
-	 -webkit-animation: fadeIn 1s;
-    animation: fadeIn 0.5s;	
-}
-
-#uploadPhotoInput{
-	display: none;
 }
 
 #last_seen{

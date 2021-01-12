@@ -20,7 +20,7 @@
 			</div>
 			<span><i id="notificationIcon" class="fa fa-bell-o" aria-hidden="true"></i></span>
 		</div>
-		<div id="header_data"><div><img src="{{$user_data['image']}}" alt=""><span>{{$user_data['name']}}</span><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a></div></div>
+		<div id="header_data"><div><img src="../{{$user_data['image']}}" alt=""><span>{{$user_data['name']}}</span><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a></div></div>
 	</div>
 
 	<div id="body">

@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 			type:'post',
 			data:{user_id},
 			success:(r)=>{
-				console.log(r)
+				 $(this).parents('.friend').remove();
 			}
 		})
 	})

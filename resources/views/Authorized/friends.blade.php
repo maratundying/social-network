@@ -16,9 +16,9 @@
 	</div>
 		<input type="text" id="friendsSearch" placeholder="Search">
 		@foreach($friends as $friend)
-			<div class="friend" data-userid='{{$friend->id}}'>
+			@if($friend->user1_id==Session::get('user_id'))
+			<div class="friend" data-userid='{{$friend->user2_id}}'>
 				<div id="friendsData">
-					@if($friend->user1_id==Session::get('user_id'))
 						<img src="{{$friend->meAddedFriendData->image}}" alt="">
 						<div>
 							<a href='id/{{$friend->user2_id}}'>{{$friend->meAddedFriendData->name}} {{$friend->meAddedFriendData->surname}}</a>			
@@ -26,6 +26,8 @@
 						</div>
 
 					@else 
+					<div class="friend" data-userid='{{$friend->user1_id}}'>
+				<div id="friendsData">
 						<img src="{{$friend->myAddedFriendData->image}}" alt="">
 						<div>
 							<a href='id/{{$friend->user1_id}}'>{{$friend->myAddedFriendData->name}} {{$friend->myAddedFriendData->surname}}</a>

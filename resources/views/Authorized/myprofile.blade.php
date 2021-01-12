@@ -65,7 +65,7 @@
 		<div id="photos_div">
 			<p>My photos <span>{{count($photos)}}</span></p>
 			<div>
-				@foreach($photos as $photo)
+				@foreach($photos_limited as $photo)
 					<img src="{{$photo->photo}}" alt="">
 				@endforeach
 			</div>

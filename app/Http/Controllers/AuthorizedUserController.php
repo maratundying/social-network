@@ -41,9 +41,10 @@ class AuthorizedUserController extends Controller
     function ToMyProfile(){
     	$statuses=statuses_model::where('user_id',Session::get('user_id'))->orderBy('created_at','desc')->get();
       $photos=photos_model::where('user_id',Session::get('user_id'))->get();
+      $photos_limited=photos_model::where('user_id',Session::get('user_id'))->limit(4)->get();
     	$user=user_model::where('id',Session::get('user_id'))->first();
       $friends=friends_model::where('user1_id',Session::get('user_id'))->orWhere('user2_id',Session::get('user_id'))->inRandomOrder()->limit(6)->get();
-    	return view('Authorized/myprofile',compact('user','statuses','photos','friends'));
+    	return view('Authorized/myprofile',compact('user','statuses','photos','friends','photos_limited'));
     }
 
     function ToMyMessages(){
@@ -77,6 +78,19 @@ class AuthorizedUserController extends Controller
 
     function cancelFriendRequest(Request $data){
       friends_requests::where('id',+$data->request_id)->delete();
+    }
+
+    function applyFriendRequest(Request $data){
+      $new_friend=new friends_model;
+      $new_friend->user1_id=$data->user_id;
+      $new_friend->user2_id=Session::get('user_id');
+      $new_friend->save();
+
+      friends_requests::where('user1_id',$data->user_id)->where('user2_id',Session::get('user_id'))->delete();
+    }
+
+    function declineFriendRequest(Request $data){
+      friends_requests::where('user1_id',$data->user_id)->where('user2_id',Session::get('user_id'))->delete();
     }
 
    	function ToMyStatuses(){

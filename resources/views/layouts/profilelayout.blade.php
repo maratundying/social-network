@@ -18,7 +18,32 @@
 			<div id="search_div">
 				<i class="fa fa-search" aria-hidden="true"></i><input type="text" placeholder="Search">
 			</div>
-			<span><i id="notificationIcon" class="fa fa-bell-o" aria-hidden="true"></i></span>
+			<div id="notifications">
+				<span><i id="notificationIcon" class="fa fa-bell-o" aria-hidden="true"></i></span>
+				<div id="notifications_div">
+					<p>Your page</p>
+					<div id="notifications_show">
+						@foreach($notifications as $notification)
+							<div class="not" data-requesteduserid='{{$notification->showUserData->id}}'>
+								<div id="notification_user_data">
+									<img src="../{{$notification->showUserData->image}}" alt="">
+									<div>
+										<div id="ddiv">
+											<a href="../id/{{$notification->showUserData->id}}">{{$notification->showUserData->name}}
+											{{$notification->showUserData->surname}}</a> Sent you a friend request
+										</div>
+										<div id="requests_buttons">
+											<button class="applyFriendRequest">Add friend</button>
+											<button class="declineFriendRequest">Decline</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						@endforeach
+					</div>
+					<a href="../notifications">Show all notifications</a>
+				</div>
+			</div>
 		</div>
 		<div id="header_data"><div><img src="../{{$user_data['image']}}" alt=""><span>{{$user_data['name']}}</span><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a></div></div>
 	</div>

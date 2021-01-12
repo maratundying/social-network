@@ -219,40 +219,6 @@ button{
 /*-------------------------------------------------------------------------*/
 
 
-/*--------------------------------------- statuses -------------------------*/
-#user_feed{
+#userStatuses{
 	margin-top: 20px;
-}
-
-#user_feed textarea{
-	border:none;
-	box-sizing: border-box;
-	padding:10px;
-	resize: none;
-    overflow: hidden;
-    min-height: 30px;
-    max-height: 100px;
-    width:100%;
-}
-
-#user_feed textarea:focus{
-	border:none;
-}
-
-#user_feed>input{
-	border:1px solid grey;
-	padding:10px 50px;
-}
-
-#add_status_button{
-	display: none;
-}
-
-/*-----------------------------------------------------------------------------*/
-
-#myStatuses{
-	background-color: initial;
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
 }

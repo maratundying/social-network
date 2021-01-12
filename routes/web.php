@@ -38,3 +38,5 @@ Route::post('/addNewStatus','AuthorizedUserController@addNewStatus');
 Route::post('/unfriendFromFriend','AuthorizedUserController@unfriendFromFriend');
 Route::post('/sendFriendRequest','AuthorizedUserController@sendFriendRequest');
 Route::post('/cancelFriendRequest','AuthorizedUserController@cancelFriendRequest');
+Route::post('/applyFriendRequest','AuthorizedUserController@applyFriendRequest');
+Route::post('/declineFriendRequest','AuthorizedUserController@declineFriendRequest');

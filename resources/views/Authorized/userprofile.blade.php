@@ -77,11 +77,12 @@
 			@if(count($user_photos)>0)
 			<div>
 				@foreach($user_photos_limited as $photo)
-					<img src="{{$photo->photo}}" alt="">
+					<img src="../{{$photo->photo}}" alt="">
 				@endforeach
 			</div>
-			@endif
+				@else
 				<p>User have no photo</p>
+			@endif
 		</div>
 
 		<div id="userStatuses">

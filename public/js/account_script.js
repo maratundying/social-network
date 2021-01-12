@@ -9,8 +9,6 @@ jQuery(document).ready(function($) {
 
 	$(document).on('click','#add_status_button',function(){
 		var input_status=$("#add_status_input").val();
-		console.log(input_status)
-
 		$.ajaxSetup({
 			headers: {
 				'X-CSRF-TOKEN': $("meta[name='csrf-token']").attr('content')
@@ -22,11 +20,30 @@ jQuery(document).ready(function($) {
 			type:'post',
 			data:{input_status},
 			success:(r)=>{
+				let user_photo=$("#userPhoto").attr('src')
+				let user_name=$("#name_surname").children(':first').html();
 				$("#add_status_input").val('')
-				$("#myStatuses").prepent(`
-						<div class="post" data-statusid="{{$status->id}}">
+				$("#myStatuses").prepend(`
+						<div class="post" data-statusid="${r.id}">
 							<div id="postData">
-								
+								<img src='../${user_photo}'>
+								<div>
+									<p><a href="id/${r.user_id}"><span>${user_name}</span></a></p>
+									<p>Just now</p>
+								</div>
+							</div>
+
+							<div id="userStatus">
+								${input_status}
+								<div id="statusBorder"></div>
+							</div>
+
+							<div id="statusButtons">
+								<i class="fa fa-heart-o likePost" aria-hidden="true"></i>
+								<span id='countOfLikes'>
+								</span>
+								<i class="fa fa-commenting-o" aria-hidden="true"></i>
+								<i class="fa fa-share" aria-hidden="true"></i>
 							</div>
 						</div>
 
